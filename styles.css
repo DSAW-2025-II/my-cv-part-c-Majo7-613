@@ -1,0 +1,28 @@
+header {
+    background: linear-gradient(90deg, #a78bfa, #b497f5);
+    color: white;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Ajuste para las secciones */
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    border-left: 6px solid #a78bfa;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    color: #6b21a8;
+    font-weight: 700;
+}
