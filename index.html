@@ -10,8 +10,8 @@
         background-color: #f8f9fa;
     }
     header {
-        background: linear-gradient(to right, #c084fc, #a855f7);
-        color: white;
+        background: linear-gradient(to right, #d8b4fe, #c084fc);
+        color: rgb(5, 2, 2);
         padding: 2rem;
         border-radius: 10px;
         text-align: center;
@@ -19,7 +19,7 @@
         max-width: 1100px;
     }
     .section-card {
-        border-left: 6px solid #a855f7;
+        border-left: 6px solid #c084fc;
         border-radius: 10px;
         background-color: white;
         padding: 1.5rem;
@@ -31,12 +31,12 @@
         transform: translateY(-5px);
     }
     .section-title {
-        color: #6d28d9;
+        color: #7e22ce;
         font-weight: bold;
         margin-bottom: 1rem;
     }
     .mini-card {
-        border: 1px solid #a855f7;
+        border: 1px solid #c084fc;
         border-radius: 8px;
         padding: 10px;
         margin-bottom: 10px;
@@ -45,6 +45,30 @@
     }
     .mini-card:hover {
         transform: scale(1.03);
+    }
+    /* Grid de idiomas y habilidades */
+    .languages-grid, .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-around;
+    }
+    .language-item, .skill-category {
+        border: 1px solid #c084fc;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: white;
+        flex: 1 1 calc(45% - 10px);
+        min-width: 150px;
+        transition: transform 0.2s ease-in-out;
+    }
+    .language-item:hover, .skill-category:hover {
+        transform: scale(1.03);
+    }
+    @media (max-width: 576px) {
+        .language-item, .skill-category {
+            flex: 1 1 100%;
+        }
     }
 </style>
 </head>
@@ -76,65 +100,114 @@
         <p>Estudiante de Ingeniería Informática con enfoque en desarrollo creativo, diseño de interfaces y participación social. Apasionada por aprender, construir soluciones con impacto humano y explorar la intersección entre tecnología, arte y emociones.</p>
     </section>
 
+    <!-- Educación -->
+    <section class="section-card">
+        <h3 class="section-title">Educación</h3>
+        <div class="mini-card">
+            <h4>Ingeniería Informática</h4>
+            <ul>
+                <li><p class="institution">Universidad de La Sabana</p></li>
+                <li><p class="period">2024 - Presente (Tercer semestre)</p></li>
+            </ul>
+        </div>
+        <div class="mini-card">
+            <h4>Bachillerato Internacional (IB)</h4>
+            <ul>
+                <li><p class="institution">Colegio Mayor de los Andes</p></li>
+                <li><p class="period">Promoción 2024</p></li>
+                <li><p class="description">Participación en el programa CAS (Creatividad, Actividad y Servicio) con más de 100 horas de proyectos sociales, ambientales y académicos.</p></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Experiencia Laboral -->
+    <section class="section-card">
+        <h3 class="section-title">Experiencia Laboral</h3>
+        <div class="mini-card">
+            <h4>Participante - Summer of Making 2025</h4>
+            <ul>
+                <li><p class="institution">Hack Club</p></li>
+                <ul>
+                    <li><strong>“My Mind Late At Night”:</strong> Visualizador emocional con Python y Tkinter</li>
+                    <li><strong>“My Personal Soundtrack”:</strong> App que sugiere música según emociones del usuario</li>
+                </ul>
+                <li><p class="period">2025 - Presente</p></li>
+                <li><p>Desarrollo de proyectos creativos e innovadores en programación, diseño e ingeniería.</p></li>
+            </ul>
+        </div>
+        <div class="mini-card">
+            <h4>Voluntaria en Proyectos Sociales</h4>
+            <p class="institution">Múltiples organizaciones</p>
+            <p class="period">Octubre 2022 - Junio 2023</p>
+            <ul>
+                <li>Bienestar infantil en hogares de niños vulnerables</li>
+                <li>Proyectos de reforestación y sostenibilidad ambiental</li>
+                <li>Promoción de donación de médula ósea</li>
+                <li>Organización de eventos educativos y comunitarios</li>
+            </ul>
+        </div>
+    </section>
+
     <!-- Habilidades -->
     <section class="section-card">
-        <h3 class="section-title">Habilidades</h3>
-        <div class="row">
-            <div class="col-md-4 mini-card">
-                <strong>Habilidades Técnicas:</strong><br>
-                Python (Intermedio), Java (Intermedio), HTML/CSS (Básico-Intermedio), JavaScript (Básico), Git/GitHub (Básico), Excel (Intermedio)
-            </div>
-            <div class="col-md-4 mini-card">
-                <strong>Herramientas y Frameworks:</strong><br>
-                Tkinter (Básico), TTKBootstrap (Básico), Canva (Intermedio), Figma (Básico)
-            </div>
-            <div class="col-md-4 mini-card">
-                <strong>Habilidades Blandas:</strong><br>
-                Liderazgo, trabajo en equipo, comunicación efectiva, gestión de proyectos
-            </div>
-        </div>
+    <h3 class="section-title">Habilidades</h3>
+    <div class="skills-grid">
+        <div class="language-item"><strong>Python:</strong> Intermedio</div>
+        <div class="language-item"><strong>Java:</strong> Intermedio</div>
+        <div class="language-item"><strong>HTML/CSS:</strong> Básico-Intermedio</div>
+        <div class="language-item"><strong>JavaScript:</strong> Básico</div>
+        <div class="language-item"><strong>Git/GitHub:</strong> Básico</div>
+        <div class="language-item"><strong>Excel:</strong> Intermedio</div>
+        <div class="language-item"><strong>Tkinter:</strong> Básico</div>
+        <div class="language-item"><strong>TTKBootstrap:</strong> Básico</div>
+        <div class="language-item"><strong>Canva:</strong> Intermedio</div>
+        <div class="language-item"><strong>Figma:</strong> Básico</div>
+        <div class="language-item"><strong>Liderazgo comunitario y juvenil</strong></div>
+        <div class="language-item"><strong>Planificación de eventos</strong></div>
+        <div class="language-item"><strong>Trabajo en equipo</strong></div>
+        <div class="language-item"><strong>Gestión logística</strong></div>
+    </div>
     </section>
 
     <!-- Idiomas -->
     <section class="section-card">
         <h3 class="section-title">Idiomas</h3>
-        <div class="row justify-content-around text-center">            
-            <div class="col-md-2 mini-card">Español: Nativo</div>
-            <div class="col-md-2 mini-card">Inglés: Avanzado </div>
-            <div class="col-md-2 mini-card">Francés: Básico - Intermedio</div>
-            <div class="col-md-2 mini-card">Italiano: Básico</div>
-            <div class="col-md-2 mini-card">Coreano: Básico</div>
+        <div class="languages-grid">
+            <div class="language-item"><h4>Español</h4><p>Nativo</p></div>
+            <div class="language-item"><h4>Inglés</h4><p>Avanzado (B2-C1)</p></div>
+            <div class="language-item"><h4>Francés</h4><p>Intermedio</p></div>
+            <div class="language-item"><h4>Italiano</h4><p>Básico</p></div>
+            <div class="language-item"><h4>Coreano</h4><p>Básico</p></div>
         </div>
     </section>
-    
 
     <!-- Intereses y Hobbies -->
     <section class="section-card">
-        <h3 class="section-title">Intereses y Hobbies</h3>
-        <div class="row justify-content-around text-center">            
-            <div class="col-md-3 mini-card">Programación creativa</div>
-            <div class="col-md-3 mini-card">Diseño de interfaces</div>
-            <div class="col-md-3 mini-card">Participación en comunidades</div>
-            <div class="col-md-3 mini-card">Voluntariado social</div>
-            <div class="col-md-3 mini-card">Visualización de datos</div>
-            <div class="col-md-3 mini-card">Lectura y música</div>
-            <div class="col-md-3 mini-card">Exploración tecnológica</div>
-            <div class="col-md-3 mini-card">Psicología emocional</div>
-        </div>
+    <h3 class="section-title">Intereses y Hobbies</h3>
+    <div class="languages-grid">
+        <div class="language-item">Programación creativa</div>
+        <div class="language-item">Diseño de interfaces</div>
+        <div class="language-item">Participación en comunidades tecnológicas</div>
+        <div class="language-item">Voluntariado social y ambiental</div>
+        <div class="language-item">Lectura, música y expresión emocional</div>
+        <div class="language-item">Exploración tecnológica</div>
+        <div class="language-item">Psicología emocional</div>
+        <div class="language-item">Escritura reflexiva</div>
+        <div class="language-item">Aprendizaje de idiomas</div>
+        <div class="language-item">Resolución de puzzles</div>
+    </div>
     </section>
 
     <!-- Certificaciones -->
     <section class="section-card">
-        <h3 class="section-title">Certificaciones</h3>
-        <div class="row justify-content-around text-center">            
-            <div class="col-md-6 mini-card">Certificación en Microsoft Excel</div>
-            <div class="col-md-6 mini-card">Participación en Summer of Making 2025</div>
-            <div class="col-md-6 mini-card">Programa CAS – Bachillerato Internacional</div>
-            <div class="col-md-6 mini-card">Proyectos sociales comunitarios</div>
-        </div>
+    <h3 class="section-title">Certificaciones</h3>
+    <div class="languages-grid">
+        <div class="language-item"><strong>Certificación en Microsoft Excel</strong></div>
+        <div class="language-item"><strong>Participación en Summer of Making 2025</strong></div>
+        <div class="language-item"><strong>Programa CAS – Bachillerato Internacional</strong></div>
+        <div class="language-item"><strong>Proyectos sociales comunitarios</strong></div>
+    </div>
     </section>
-
 </main>
-
 </body>
 </html>
