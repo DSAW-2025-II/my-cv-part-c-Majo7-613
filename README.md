@@ -2,7 +2,11 @@
 
 # María José Almanza Caviedes 
 
+## CV no responsive
 https://dsaw-2025-ii.github.io/my-cv-part-a-Majo7-613/
+
+## CV responsive
+https://dsaw-2025-ii.github.io/my-cv-part-c-Majo7-613/
 
 # Gracias por leer
 
